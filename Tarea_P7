@@ -30,7 +30,7 @@ def contrasena(NC,Contra):
             #print(bcrypt.checkpw(Contra.encode("utf-8"), Cont_si_Sifrada.encode("utf-8"))) #Esta cosa segun tiene que regresar el valor de True y no jala sepa pq?
             return Contra==Cont_no_Sifrada
     Contrasena.close()
-def Ingresar(NC,Contr):
+def autenticar_usuario(NC,Contr):
     directorio={}
     nom=Confirmar_nombre(NC)
     if nom!=False:
@@ -51,4 +51,4 @@ def Ingresar(NC,Contr):
 
 Ur=input("Ingresa el Usuario: " )
 Con=input("Ingresa la Contraseña")
-print(Ingresar(Ur,Con))
+print(autenticar_usuario(Ur,Con))
