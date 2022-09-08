@@ -27,7 +27,7 @@ def contrasena(NC,Contra):
         CO=CO.split(" ")
         num_Control,Cont_no_Sifrada,Cont_si_Sifrada=CO
         if NC==num_Control:
-            #print(bcrypt.checkpw(Contra.encode("utf-8"), Cont_si_Sifrada.encode("utf-8"))) #Esta cosa segun tiene que regresar el valor de True y no jala sepa pq?
+            print(bcrypt.checkpw(Contra.encode("utf-8"), Cont_si_Sifrada.encode("utf-8"))) #Esta cosa segun tiene que regresar el valor de True y no jala aunque la contraseña si consida, sepa pq?
             return Contra==Cont_no_Sifrada
     Contrasena.close()
 def autenticar_usuario(NC,Contr):
